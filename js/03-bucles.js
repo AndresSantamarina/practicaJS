@@ -37,3 +37,4 @@ for(inicializo una variable; condicion logica; incremento o decremento de la var
 for (let renglon = 1; renglon <= 10; renglon++){
     document.write(`<p>Renglón número ${renglon} con for</p>`);
 }
+
