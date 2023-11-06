@@ -8,12 +8,21 @@ function saludoNuevo(nombreIngresado, apellidoIngresado) {
     document.write(`<p>Hola ${nombreIngresado} ${apellidoIngresado}. Que tengas un buen día</p>`);
 };
 
-function sumar(numero1, numero2) {
-    const resultado = numero1 + numero2;
-    console.log(resultado);
-    return resultado;
-}
+// function sumar(numero1, numero2) {
+//     const resultado = numero1 + numero2;
+//     console.log(resultado);
+//     return resultado;
+// }
 
+//arrow functions
+// const sumar = (numero1, numero2) => {
+//     const resultado = numero1 + numero2;
+//     console.log(resultado);
+//     return resultado;
+// }
+
+//Tiene que ser una funcion de una sola linea, tiene un return implicito antes de la operacion matematica
+const sumar = (numero1, numero2) => numero1 + numero2;
 
 
 
