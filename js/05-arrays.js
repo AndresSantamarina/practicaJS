@@ -58,5 +58,12 @@ document.write(`</ul>`);
 console.log(juegos.length);
 console.log(juegos);
 
+// modificamos los elementos de un array
+juegos[5] = 'Stardew valley';
 
-
+document.write(`<h2>Lista de juegos, modificamos un elemnto del array (${juegos.length})</h2>`);
+document.write(`<ul>`);
+for (let indiceJuego = 0; indiceJuego < juegos.length; indiceJuego++) {
+    document.write(`<li>${juegos[indiceJuego]}</li>`);
+}
+document.write(`</ul>`);
