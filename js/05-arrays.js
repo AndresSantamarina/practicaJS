@@ -67,3 +67,36 @@ for (let indiceJuego = 0; indiceJuego < juegos.length; indiceJuego++) {
     document.write(`<li>${juegos[indiceJuego]}</li>`);
 }
 document.write(`</ul>`);
+
+//eliminar elementos del array --- shift elimina, unshift agrega, todo al principio
+
+juegos.shift();
+
+document.write(`<h2>Lista de juegos - 1 elemento del array (${juegos.length})</h2>`);
+document.write(`<ul>`);
+for (let indiceJuego = 0; indiceJuego < juegos.length; indiceJuego++) {
+    document.write(`<li>${juegos[indiceJuego]}</li>`);
+}
+document.write(`</ul>`);
+
+juegos.splice(3, 1);
+//juegos.splice(3,3) elimina 3 elementos desde la tercera posicion
+//juegos.splice(3) elimina todo desde la tercera posicion
+//juegos.splice(0) elimina todo
+
+document.write(`<h2>Lista de juegos - 1 elemento del array (${juegos.length})</h2>`);
+document.write(`<ul>`);
+for (let indiceJuego = 0; indiceJuego < juegos.length; indiceJuego++) {
+    document.write(`<li>${juegos[indiceJuego]}</li>`);
+}
+document.write(`</ul>`);
+
+//para eliminar el ultimo elemento del array
+juegos.pop();
+
+document.write(`<h2>Lista de juegos - 1 elemento del array (${juegos.length})</h2>`);
+document.write(`<ul>`);
+for (let indiceJuego = 0; indiceJuego < juegos.length; indiceJuego++) {
+    document.write(`<li>${juegos[indiceJuego]}</li>`);
+}
+document.write(`</ul>`);
