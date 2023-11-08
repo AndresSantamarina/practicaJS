@@ -18,7 +18,7 @@ const mostrarArray = (arreglo, titulo) => {
     // for (let i = 0; i < juegos.length; i++) {
     //     document.write(`<li>${juegos[i]}</li>`);
     // }
-    arreglo.map((item)=> document.write(`<li>${item}</li>`));
+    arreglo.map((item) => document.write(`<li>${item}</li>`));
     document.write(`</ul>`);
 }
 
@@ -130,8 +130,30 @@ console.log(juegos[8]);
 console.log(juegos[8].includes('Kombat')); //devuelve true o false
 
 //const juegosMKT = juegos.filter((juego)=> condicion logica );
-//const juegosMKT = juegos.filter((juego)=> juego === 'Mortal Kombat 1'); //filter usa una funcion anonima, si uso llaves {} tengo que poner return, que se omite al no usar las llaves
-const juegosMKT = juegos.filter((juego)=> juego.includes('Mortal Kombat'));
+//const juegosMKT = juegos.filter((juego)=> juego === 'Mortal Kombat 1'); //filter usa una funcion anonima, si uso llaves {} tengo que poner return, que se omite al no usar las llaves. También le puedo sacar los parentesis a juego.
+const juegosMKT = juegos.filter((juego) => juego.includes('Mortal Kombat'));
 console.log(juegosMKT);
 
 mostrarArray(juegosMKT, 'Familia de juegos de Mortal Kombat');
+
+//find devuelve el primer elemento que coincide con lo que se busca, y deja de iterar. Sabe devolver objetos
+const juegoBuscado = juegos.find((itemJuego) => itemJuego.includes('Minecraft'));
+const juegoBuscado2 = juegos.find((itemJuego) => itemJuego.includes('Sekiro'));
+
+if (juegoBuscado) {
+
+} else {
+
+}
+document.write(`<p>Juego buscado: ${juegoBuscado}</p>`);
+/*if (juegoBuscado2 !== undefined){
+    document.write(`<p>Juego buscado: ${juegoBuscado2}</p>`);
+}else{
+    document.write('<p>No se encontró el juego buscado</p>')
+} */
+
+//Operador ternario, si lo que quiero hacer tiene mas de dos lineas, uso llaves.
+//(condicion logica) ? toda la logica si se cumple la condicion : la logica si no se cumple la condicion
+const respuesta = (juegoBuscado2 !== undefined) ? juegoBuscado2 : "No se encontró el término buscado.";
+//document.write(`<p>Juego buscado: ${(juegoBuscado2 !== undefined) ? juegoBuscado2 : "No se encontró el término buscado."}</p>`);
+document.write(`<p>Juego buscado: ${respuesta}</p>`);
