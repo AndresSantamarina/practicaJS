@@ -112,3 +112,14 @@ for (let indiceJuego = 0; indiceJuego < juegos.length; indiceJuego++) {
 document.write(`</ul>`);
 
 mostrarJuegos('Lista de juegos mostrada a través de una función');
+
+juegos.push('Mortal Kombat 1', 'Mortal Kombat 2', 'Mortal Kombat 3', 'Mortal Kombat 1');
+mostrarJuegos('Agregamos nuevos jueguitos');
+
+console.log(juegos[8]);
+console.log(juegos[8].includes('Kombat')); //devuelve true o false
+
+//const juegosMKT = juegos.filter((juego)=> condicion logica );
+//const juegosMKT = juegos.filter((juego)=> juego === 'Mortal Kombat 1'); //filter usa una funcion anonima, si uso llaves {} tengo que poner return, que se omite al no usar las llaves
+const juegosMKT = juegos.filter((juego)=> juego.includes('Mortal Kombat'));
+console.log(juegosMKT);
