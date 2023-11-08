@@ -12,6 +12,16 @@ function mostrarJuegos(titulo) {
     document.write(`</ul>`);
 }
 
+const mostrarArray = (arreglo, titulo) => {
+    document.write(`<h2>${titulo}</h2>`);
+    document.write(`<ul>`);
+    // for (let i = 0; i < juegos.length; i++) {
+    //     document.write(`<li>${juegos[i]}</li>`);
+    // }
+    arreglo.map((item)=> document.write(`<li>${item}</li>`));
+    document.write(`</ul>`);
+}
+
 //mostrar un array
 console.log(juegos.length);
 console.log(juegos);
@@ -123,3 +133,5 @@ console.log(juegos[8].includes('Kombat')); //devuelve true o false
 //const juegosMKT = juegos.filter((juego)=> juego === 'Mortal Kombat 1'); //filter usa una funcion anonima, si uso llaves {} tengo que poner return, que se omite al no usar las llaves
 const juegosMKT = juegos.filter((juego)=> juego.includes('Mortal Kombat'));
 console.log(juegosMKT);
+
+mostrarArray(juegosMKT, 'Familia de juegos de Mortal Kombat');
