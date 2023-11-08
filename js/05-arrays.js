@@ -3,8 +3,8 @@ const productos = [];
 
 const juegos = ['counter-strike', 'Minecraft', 2023, true, 'valorant', 'half-life', 'lol'];
 
-function mostrarJuegos() {
-    document.write(`<h2>Lista de juegos mostrada a través de una función (${juegos.length})</h2>`);
+function mostrarJuegos(titulo) {
+    document.write(`<h2>${titulo} (${juegos.length})</h2>`);
     document.write(`<ul>`);
     for (let indiceJuego = 0; indiceJuego < juegos.length; indiceJuego++) {
         document.write(`<li>${juegos[indiceJuego]}</li>`);
@@ -33,15 +33,16 @@ document.write(`</ul>`);
 
 //agregar elementos al principio del array
 juegos.unshift('God of War', 'Street Fighter');
-document.write(`<h2>Lista de juegos + 2 juegos extras</h2>`);
-document.write(`<ul>`);
-for (let indiceJuego = 0; indiceJuego < juegos.length; indiceJuego++) {
-    document.write(`<li>${juegos[indiceJuego]}</li>`);
-}
-document.write(`</ul>`);
+mostrarJuegos('Lista de juegos + 2 juegos extras');
+// document.write(`<h2>Lista de juegos + 2 juegos extras</h2>`);
+// document.write(`<ul>`);
+// for (let indiceJuego = 0; indiceJuego < juegos.length; indiceJuego++) {
+//     document.write(`<li>${juegos[indiceJuego]}</li>`);
+// }
+// document.write(`</ul>`);
 
-console.log(juegos.length);
-console.log(juegos);
+// console.log(juegos.length);
+// console.log(juegos);
 
 //agregar elementos en el medio
 juegos.splice(6, 0, 'Dark Souls');
@@ -110,4 +111,4 @@ for (let indiceJuego = 0; indiceJuego < juegos.length; indiceJuego++) {
 }
 document.write(`</ul>`);
 
-mostrarJuegos();
+mostrarJuegos('Lista de juegos mostrada a través de una función');
