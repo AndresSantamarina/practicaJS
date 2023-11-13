@@ -3,13 +3,14 @@
 //en la parte del constructor pido los parametros, que pueden o no tener los mismos nombres que las propiedades.
 //anioLanzamiento, desarrollador, 
 class VideoJuego{
+    #etiquetas;//propiedad privada
     constructor(titulo, genero, precio, etiquetas, anioLanzamiento, desarrollador){
         //declaramos las propiedades que tendra un videojuego
         //this.nombreDeLaPropiedad = parametro;
         this._titulo = titulo;
         this.genero = genero;
         this._precio = precio;
-        this.etiquetas = etiquetas;
+        this.#etiquetas = etiquetas;
         this.anioLanzamiento = anioLanzamiento;
         this.desarrollador = desarrollador;
         //propiedad por defecto
@@ -36,10 +37,18 @@ class VideoJuego{
     mostrarDatos(){
         document.write(`<ul>
         <li>Título: ${this.titulo}</li>
-        <li>Precio: ${this.precio}</li>
+        <li>Precio: $${this.precio}USD</li>
         <li>Género: ${this.genero}</li>
         <li>Desarrollador: ${this.desarrollador}</li>
         </ul>`)
     }
-
 }
+
+//crear o instanciar un objeto
+
+const minecraft = new VideoJuego('Minecraft','Sandbox',30,['cubitos','granja','mundo abierto', 'creeper'], 2008,'Mojang');
+
+minecraft.mostrarDatos();
+
+document.write(`<p>Título del juego: ${minecraft.titulo}, precio: ${minecraft.precio} USD</p>`);
+document.write(`<p>Etiquetas: ${minecraft.etiquetas}</p>`);
